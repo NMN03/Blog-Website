@@ -9,7 +9,7 @@ const _ = require("lodash");
 const homeStartingContent = "Hey there. Hello and Welcome to this blog page. I am Naman Khera, a 19 year old CSE student. I built this blog page as a part of a course I've been taking to learn the skills required for full-stack development.This blog post page has been made using HTML,css(bootstrap),javascript and Node.js(express). Mongoose and MongoDB Atlas have been used as the database.";
 const aboutContent = "I am a second year BTECH student pursuing a degree in Computer Science from VIT Vellore.My hobbies include reading, music and playing sports.Currently I am learning how to become a web developer.";
 const contactContent = "You can connect with me through any of the following mediums: ";
-
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -92,6 +92,6 @@ app.get("/posts/:postName", function(req, res){
 
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(PORT, function() {
+  console.log("Server started ");
 });
